@@ -1,20 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Router and Routes
-import ForgotPassword from './Pages/ForgotPassword';
-import Login from './Pages/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage'; // Adjust path as per your folder structure
+import Login from './pages/Login'; // Adjust path as per your folder structure
+import ForgotPassword from './pages/ForgotPassword';
 
-function App() {
+
+
+const App: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter> {/* Ensure that your app is wrapped inside BrowserRouter */}
       <Routes>
-        
-        <Route path="/" element={<Login />} />
-        
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        
+        {/* Define routes for the Home, Login, and other pages */}
+        <Route path="/" element={<HomePage />} /> {/* Home page route */}
+        <Route path="/login" element={<Login />} /> {/* Login page route */}
+        <Route path="/forgotpassword" element={<ForgotPassword />} /> 
+       
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -4,7 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
+/* For smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Global transition for background color */
+  * {
+    transition: background-color 0.5s ease;
+  }
+  
 
 
 @tailwind base;

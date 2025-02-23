@@ -77,7 +77,7 @@ const ForgotPassword = () => {
         )}
 
         <button
-          onClick={() => navigate("/")} 
+          onClick={() => navigate("/login")} 
           className="w-full mt-4 bg-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition font-Raleway"
         >
           Back to Login
