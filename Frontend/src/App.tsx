@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage'; // Adjust path as per your folder structure
-import Login from './pages/Login'; // Adjust path as per your folder structure
-import ForgotPassword from './pages/ForgotPassword';
+import HomePage from './Pages/HomePage'; // Adjust path as per your folder structure
+import Login from './Pages/Login'; // Adjust path as per your folder structure
+import ForgotPassword from './Pages/ForgotPassword';
 
 
 
