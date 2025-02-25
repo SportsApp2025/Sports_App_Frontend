@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition >= 100) {
-        setNavbarBg('bg-black'); // When scrolled, set navbar background to black
+        setNavbarBg('bg-[#011936]'); // When scrolled, set navbar background to black
       } else {
         setNavbarBg('bg-transparent'); // At the top, set navbar background to transparent
       }
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu (visible when the menu is open) */}
       <div
-        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-0 right-0 w-full bg-black rounded-xl p-6 z-40`}
+        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-0 right-0 w-full bg-[#011936] rounded-2xl p-6 z-40`}
       >
         {/* Close "X" icon inside the mobile menu */}
         {isMenuOpen && (

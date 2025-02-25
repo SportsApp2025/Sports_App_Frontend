@@ -19,7 +19,9 @@ const HomePage: React.FC = () => {
       <Navbar /> {/* Add Navbar here */}
   
       {/* Overlay placed behind the nav */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-65"></div>
+
+      
   
       <div className="absolute inset-0 flex flex-col justify-center items-center sm:items-start px-6 sm:px-10 text-white">
         <div className="text-center sm:text-left">
@@ -29,6 +31,8 @@ const HomePage: React.FC = () => {
           <p className="text-base sm:text-lg font-thin mb-8 font-Opensans">
             Connect with Experts in the entertainment industry <br /> assess your skill and performance
           </p>
+       
+            
           <Link to="/signup" className="font-Raleway font-semibold text-xl sm:text-2xl bg-[#FE221E] hover:bg-red-500 transition cursor-pointer text-white px-6 py-3 rounded-xl">
             Sign Up
           </Link>
@@ -41,11 +45,11 @@ const HomePage: React.FC = () => {
       {/* About Section */}
       <div id="about" className="px-4 sm:px-8 md:px-16 lg:px-40 mt-24">
         {/* Container for the content */}
-        <div className="flex flex-col md:flex-row items-center bg-yellow-100 p-4 md:p-12 rounded-xl shadow-lg">
+        <div className="flex flex-col md:flex-row items-center bg-[#FFF8DA] p-4 md:p-12 rounded-xl shadow-lg">
           
           {/* Left Content */}
           <div className="md:w-1/2 text-left mb-6 md:mb-0">
-            <h4 className="text-red-600 font-semibold font-Raleway">Why Choose Us</h4>
+            <h4 className="text-[#FE221E] font-semibold font-Raleway">Why Choose Us</h4>
             <h2 className="text-2xl font-bold text-gray-900 mt-2 font-Opensans">Lorem ipsum dolor sit amet pretium</h2>
             <p className="text-gray-600 mt-4 font-Opensans">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem consectetur adipiscing elit.Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.
@@ -53,7 +57,7 @@ const HomePage: React.FC = () => {
             <p className="text-gray-600 mt-2 font-Opensans">
               Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit.Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.
             </p>
-            <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition font-Raleway">
+            <button className="mt-4 bg-[#FE221E] text-white px-6 py-2 rounded-lg hover:bg-red-500 transition font-Raleway">
               Get Started
             </button>
           </div>
@@ -122,7 +126,7 @@ const HomePage: React.FC = () => {
     <div className="w-full sm:w-80 lg:w-96 xl:w-96 border rounded-lg p-6 bg-white shadow-md transition-all duration-300 hover:shadow-lg">
       <h3 className="text-xl font-semibold text-gray-800 font-Raleway">Basic</h3>
       <p className="text-gray-600 mt-2 font-Opensans">Lorem ipsum dolor sit amet premium consectetur adipiscing elit.</p>
-      <button className="w-full bg-yellow-400 font-Raleway text-black py-2 mt-4 rounded-lg font-semibold hover:bg-yellow-500 transition">
+      <button className="w-full  bg-[#F9DC5C] font-Raleway text-black py-2 mt-4 rounded-lg font-semibold hover:bg-yellow-500 transition">
         Get Started
       </button>
       <ul className="mt-4 space-y-2 text-gray-600 font-Opensans">
@@ -135,13 +139,13 @@ const HomePage: React.FC = () => {
     </div>
 
     {/* Premium Plan */}
-    <div className="w-full sm:w-80 lg:w-96 xl:w-96 border-2 bg-white border-red-500 rounded-lg p-6 shadow-md relative transition-all duration-300 hover:shadow-lg">
-      <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white text-sm px-3 py-1 rounded-full">
+    <div className="w-full sm:w-80 lg:w-96 xl:w-96 border-2 bg-white border-[#FE221E] rounded-lg p-6 shadow-md relative transition-all duration-300 hover:shadow-lg">
+      <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#FE221E] text-white text-sm px-3 py-1 rounded-full">
         Popular
       </span>
       <h3 className="text-xl font-semibold text-gray-800 font-Raleway">Premium</h3>
       <p className="text-gray-600 mt-2 font-Opensans">Lorem ipsum dolor sit amet premium consectetur adipiscing elit.</p>
-      <button className="w-full bg-yellow-400 font-Opensans text-black py-2 mt-4 rounded-lg font-semibold hover:bg-yellow-500 transition">
+      <button className="w-full bg-[#F9DC5C] font-Opensans text-black py-2 mt-4 rounded-lg font-semibold hover:bg-yellow-500 transition">
         Get Started
       </button>
       <ul className="mt-4 space-y-2 text-gray-600 font-Opensans">
@@ -161,7 +165,7 @@ const HomePage: React.FC = () => {
   <div className="bg-[#f8fefa] p-10">
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
       {/* Get in Touch Section */}
-      <div className="bg-yellow-100 p-6 rounded-lg">
+      <div className="bg-[#FFF8DA]  p-6 rounded-lg">
         <h2 className="text-lg font-bold font-Raleway">Get in Touch</h2>
         <div className="mt-4">
           <p className="font-semibold font-Raleway">Visit us</p>
@@ -199,7 +203,7 @@ const HomePage: React.FC = () => {
           <input type="checkbox" className="mr-2 font-Opensans" />
           <span>I'd like to receive more information about the company, I understand and agree to the <span className="text-blue-600">Privacy Policy</span></span>
         </div>
-        <button className="w-full bg-[#FE221E] text-white py-2 mt-4 rounded-lg font-semibold font-Raleway">
+        <button className="w-full bg-[#FE221E] hover:bg-red-500 text-white py-2 mt-4 rounded-lg font-semibold font-Raleway">
           Send Message
         </button>
       </div>
@@ -208,7 +212,7 @@ const HomePage: React.FC = () => {
 </div>
 
        {/* Footer */}
-<div className="bg-gray-950 text-white py-12">
+<div className=" bg-[#011936] text-white py-12">
   <div className="max-w-6xl mx-auto px-4">
     <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
       
