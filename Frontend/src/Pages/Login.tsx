@@ -74,7 +74,7 @@ const Login: React.FC = () => {
         <p className="mt-4 text-black-600">
           Not a member yet?{" "}
           <button
-            onClick={() => navigate("/sign-up")}
+            onClick={() => navigate("/SignupPage")}
             className="text-[#FA6357] hover:underline cursor-pointer"
           >
             Sign Up

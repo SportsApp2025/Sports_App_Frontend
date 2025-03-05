@@ -53,6 +53,9 @@ const EmailVerification = () => {
     };
   }, [timer]);
 
+  // Check if OTP is complete
+  const isOtpComplete = otp.every((digit) => digit !== "");
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-lg w-auto text-center">
@@ -85,7 +88,12 @@ const EmailVerification = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#FE221E] text-white py-2 rounded-lg hover:bg-red-400 transition font-Opensans"
+                className={`w-full py-2 rounded-lg transition font-Opensans ${
+                  isOtpComplete
+                    ? "bg-[#FE221E] text-white hover:bg-red-400"
+                    : "bg-red-400 text-white cursor-not-allowed"
+                }`}
+                disabled={!isOtpComplete} // Disable button if OTP is not complete
               >
                 Verify
               </button>

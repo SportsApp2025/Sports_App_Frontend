@@ -1,8 +1,8 @@
-import React, { useState, ChangeEvent, FormEvent } from "react"; 
-import { useNavigate } from "react-router-dom"; 
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [emailSent, setEmailSent] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
@@ -25,6 +25,8 @@ const ForgotPassword = () => {
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
   };
+
+  const isEmailValid = validateEmail(email);  // This will check if the email is valid
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -68,7 +70,12 @@ const ForgotPassword = () => {
               )}
               <button
                 type="submit"
-                className="w-full bg-[#FE221E] text-white py-2 rounded-lg hover:bg-red-400 transition font-Raleway"
+                disabled={!email || !isEmailValid} // Disable button if email is empty or invalid
+                className={`w-full py-2 rounded-lg transition font-Raleway ${
+                  email && isEmailValid
+                    ? "bg-[#FE221E] text-white hover:bg-red-400"
+                    : "bg-red-400 text-white cursor-not-allowed"
+                }`}
               >
                 Send
               </button>
@@ -77,7 +84,7 @@ const ForgotPassword = () => {
         )}
 
         <button
-          onClick={() => navigate("/login")} 
+          onClick={() => navigate("/login")}
           className="w-full mt-4 bg-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition font-Raleway"
         >
           Back to Login

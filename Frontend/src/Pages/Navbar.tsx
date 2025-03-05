@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SignUp from './SignUp';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Toggle the menu visibility
   const [navbarBg, setNavbarBg] = useState<string>('transparent'); // Track background color on scroll
+   const [showSignUp, setShowSignUp] = useState(false)
+  
+    
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen); // Toggle menu visibility
@@ -58,9 +62,33 @@ const Navbar: React.FC = () => {
         <Link to="/login" className="font-Raleway font-semibold text-2xl border-2 px-4 py-1 rounded-xl hover:text-[#FE221E] hover:bg-white transition cursor-pointer">
           Login
         </Link>
-        <Link to="/signup" className="font-Raleway font-semibold text-2xl bg-[#FE221E] hover:bg-red-500 transition cursor-pointer text-white px-4 py-1 rounded-xl">
-          Sign Up
-        </Link>
+         
+
+        <button
+        onClick={() => setShowSignUp(true)}
+        className="font-Raleway font-semibold text-2xl bg-[#FE221E] hover:bg-red-500 transition cursor-pointer text-white px-4 py-1 rounded-xl">
+      
+        Sign Up
+      </button>
+
+      {showSignUp && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="relative bg-white p-8 rounded-lg shadow-lg w-[80%] max-w-4xl">
+            <button
+              onClick={() => setShowSignUp(false)}
+              className="absolute top-4 right-4 text-xl text-gray-600 hover:text-black"
+            >
+               X
+            </button>
+            <SignUp />
+          </div>
+        </div>
+      )}
+
+
+
+
+      
       </div>
 
       {/* Hamburger Icon or "X" Icon for small screens */}

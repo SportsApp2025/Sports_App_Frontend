@@ -12,7 +12,11 @@ module.exports = {
 
       },
 
-
+      colors: {
+        customYellow: "#F9DC5C",
+        lightYellow:"#FDE394",
+        customGrey:"#D9D9D9"
+      },
      
       
       
