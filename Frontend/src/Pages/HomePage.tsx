@@ -37,11 +37,13 @@ const HomePage: React.FC = () => {
             Connect with Experts in the entertainment industry <br /> assess your skill and performance
           </p>
        
+        
           <button
-          onClick={() => setShowSignUp(true)}
-           className="font-Raleway font-semibold text-2xl bg-[#FE221E] hover:bg-red-500 transition cursor-pointer text-white px-4 py-1 rounded-xl">
-           Sign Up
-           </button>
+        onClick={() => setShowSignUp(true)}
+        className="font-Raleway font-semibold text-2xl bg-[#FE221E] hover:bg-red-500 transition cursor-pointer text-white px-4 py-1 rounded-xl">
+      
+        Sign Up
+        </button>
 
       {showSignUp && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -56,6 +58,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       )}
+
           
         </div>
       </div>

@@ -9,6 +9,13 @@ import SignUp from './Pages/SignUp';
 import SignupPage from './Pages/SignupPage';
 import ResetPassword from './Pages/ResetPassword';
 
+import Details from './ProfilePage/details ';
+import Reviews from './ProfilePage/reviews';
+import Media from './ProfilePage/media';
+import MediaUpload from './ProfilePage/MediaUpload';
+
+
+
 
 
 const App: React.FC = () => {
@@ -24,7 +31,23 @@ const App: React.FC = () => {
         <Route path="/signup" element={<SignUp />} /> 
         <Route path="/signuppage" element={<SignupPage />} /> 
         <Route path="/resetpassword" element={<ResetPassword />} /> 
+        
+        <Route path="/details" element={<Details />} />
+        <Route path="/media" element={<Media />} />
 
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/mediaupload" element={<MediaUpload />} />
+        
+
+
+      
+      
+      
+       
+
+
+
+           
 
         
 
